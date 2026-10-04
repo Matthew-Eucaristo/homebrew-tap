@@ -5,19 +5,16 @@ macOS control agent (fast System 1 + LLM System 2, accessibility-native).
 
 ```bash
 brew tap matthew-eucaristo/tap
-brew trust matthew-eucaristo/tap  # one-time — the CLI formula ships a launchd service
-
-brew install s1                 # CLI (s1 command)
-brew install --cask s1          # menu-bar app + notch HUD (S1.app)
+brew install --cask s1            # S1.app + the `s1` CLI (linked onto PATH)
 # ad-hoc signed → or: brew install --cask --no-quarantine s1
 ```
 
 Uninstall leaves nothing behind:
 
 ```bash
-brew uninstall s1               # CLI gone — zero residue
-brew uninstall --zap --cask s1  # app + ~/.s1 + all Library traces gone
-brew untap matthew-eucaristo/s1
+brew uninstall --cask s1        # app + CLI symlink gone — zero residue
+brew uninstall --zap --cask s1  # + ~/.s1 + all Library traces wiped
+brew untap matthew-eucaristo/tap
 ```
 
 ## How releases land
