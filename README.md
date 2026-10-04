@@ -4,7 +4,8 @@ Homebrew tap for [s1](https://github.com/Matthew-Eucaristo/s1) — a voice-first
 macOS control agent (fast System 1 + LLM System 2, accessibility-native).
 
 ```bash
-brew tap matthew-eucaristo/s1
+brew tap matthew-eucaristo/tap
+brew trust matthew-eucaristo/tap  # one-time — the CLI formula ships a launchd service
 
 brew install s1                 # CLI (s1 command)
 brew install --cask s1          # menu-bar app + notch HUD (S1.app)

@@ -23,6 +23,7 @@ class S1 < Formula
       what's still missing.
       Menu-bar app + notch HUD:  brew install --cask s1
       Local model brain:         brew install ollama && ollama pull gemma3:4b
+      Always-on listener:        brew services start s1   (or: s1 serve --install)
       Full reset:                brew uninstall s1 && rm -rf ~/.s1
     EOS
   end
