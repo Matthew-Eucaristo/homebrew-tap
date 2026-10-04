@@ -1,6 +1,6 @@
 cask "s1" do
   version "0.2.0"
-  sha256 "91280a7a71357fded288fb00ae48ef10f23efd83098b338708a7a6b922858714"
+  sha256 "d62cf0708f7561808bb0a93b4ff3c85b8011c6924d067ad9f3d52778e731494f"
 
   url "https://raw.githubusercontent.com/Matthew-Eucaristo/homebrew-tap/main/releases/v#{version}/S1-#{version}-app.zip"
   name "s1"
