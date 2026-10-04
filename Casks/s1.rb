@@ -1,8 +1,8 @@
 cask "s1" do
   version "0.2.0"
-  sha256 "dcef050e9a942e790b505b28d5a4525ac5c77d04dbd8c1a6e6203b90fcff3479"
+  sha256 "7ffdc9abf893ac409a1f81557c29395cccc996c4534a0fc22b92238c2f98200b"
 
-  url "https://raw.githubusercontent.com/Matthew-Eucaristo/homebrew-tap/ea713f2f08377a5d01ca65e6ccf608d95257b4f9/releases/v#{version}/S1-#{version}-app.zip"
+  url "https://raw.githubusercontent.com/Matthew-Eucaristo/homebrew-tap/153a6f53dc23c26fb9f9b22c0623564b30e31995/releases/v#{version}/S1-#{version}-app.zip"
   name "s1"
   desc "Voice-first agent — menu-bar companion (System 1 + System 2), CLI included"
   homepage "https://github.com/Matthew-Eucaristo/s1"
