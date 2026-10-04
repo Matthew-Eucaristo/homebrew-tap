@@ -27,6 +27,17 @@ class S1 < Formula
     EOS
   end
 
+  # `brew services start s1` — the official Homebrew daemon path: launchd
+  # agent at login, crash-respawn only. :interactive required for
+  # WindowServer/mic access (CGEvent, AX, Speech all need an Aqua session).
+  service do
+    run [opt_bin/"s1", "serve"]
+    keep_alive crashed: true
+    process_type :interactive
+    log_path var/"log/s1.log"
+    error_log_path var/"log/s1.log"
+  end
+
   test do
     assert_match "OVERVIEW", shell_output("#{bin}/s1 --help")
   end
