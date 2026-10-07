@@ -14,6 +14,7 @@ cask "s1" do
   # The CLI ships inside the bundle (Contents/Resources/s1) — brew links it
   # into HOMEBREW_PREFIX/bin so `s1` works on PATH from the same install.
   binary "#{appdir}/S1.app/Contents/Resources/s1"
+
   # No `launchctl:` here: brew checks every listed label in the system
   # domain with sudo (a password prompt on each upgrade), and s1's optional
   # listener is a per-user agent. Upgrades must leave it running; --zap
@@ -26,21 +27,21 @@ cask "s1" do
         must_succeed: false,
         print_stderr: false,
       },
-      trash: [
-    "~/.s1",
-    "~/Library/Application Scripts/com.mattheweuc.s1",
-    "~/Library/Application Scripts/com.matthew.s1.app",
-    "~/Library/Containers/com.mattheweuc.s1",
-    "~/Library/Containers/com.matthew.s1.app",
-    "~/Library/HTTPStorages/com.mattheweuc.s1",
-    "~/Library/HTTPStorages/com.matthew.s1.app",
-    "~/Library/LaunchAgents/com.matthew.s1.serve.plist",
-    "~/Library/LaunchAgents/sh.brew.s1.plist",
-    "~/Library/Preferences/com.mattheweuc.s1.plist",
-    "~/Library/Preferences/com.matthew.s1.app.plist",
-    "~/Library/Saved Application State/com.mattheweuc.s1.savedState",
-    "~/Library/Saved Application State/com.matthew.s1.app.savedState",
-  ]
+      trash:  [
+        "~/.s1",
+        "~/Library/Application Scripts/com.matthew.s1.app",
+        "~/Library/Application Scripts/com.mattheweuc.s1",
+        "~/Library/Containers/com.matthew.s1.app",
+        "~/Library/Containers/com.mattheweuc.s1",
+        "~/Library/HTTPStorages/com.matthew.s1.app",
+        "~/Library/HTTPStorages/com.mattheweuc.s1",
+        "~/Library/LaunchAgents/com.matthew.s1.serve.plist",
+        "~/Library/LaunchAgents/sh.brew.s1.plist",
+        "~/Library/Preferences/com.matthew.s1.app.plist",
+        "~/Library/Preferences/com.mattheweuc.s1.plist",
+        "~/Library/Saved Application State/com.matthew.s1.app.savedState",
+        "~/Library/Saved Application State/com.mattheweuc.s1.savedState",
+      ]
 
   caveats <<~EOS
     Developer-signed but not notarized, so macOS blocks the first open.
