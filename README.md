@@ -10,6 +10,7 @@ brew tap matthew-eucaristo/tap
 | --- | --- | --- |
 | [s1](https://github.com/Matthew-Eucaristo/s1) | `brew install --cask s1` | Voice-first macOS control agent (fast System 1 + LLM System 2, accessibility-native). Ad-hoc signed → or `--no-quarantine`. |
 | [flutterkill](https://github.com/Matthew-Eucaristo/flutterkill) | `brew install flutterkill` | npkill-style TUI that reclaims disk space from Flutter/Dart build artifacts and caches. Built from source. |
+| [fell](https://github.com/Matthew-Eucaristo/fell) | `brew install fell` | Finds git worktrees left behind by AI coding agents; strips or retires them to the Trash with a rescue bundle, never touching what an app still tracks. Built from source. |
 
 ## Uninstall leaves nothing behind
 
@@ -18,6 +19,7 @@ brew uninstall --cask s1          # app + CLI symlink gone — zero residue
 brew uninstall --zap --cask s1    # + ~/.s1 + all Library traces wiped
 
 brew uninstall flutterkill        # flutterkill writes no config, cache or state
+brew uninstall fell               # fell writes no config, cache or state
 brew autoremove                   # drops Go if it was only a build dependency
 
 brew untap matthew-eucaristo/tap
@@ -27,3 +29,4 @@ brew untap matthew-eucaristo/tap
 
 - **s1**: `releases/v<version>/` holds the signed universal artifacts the cask downloads, served from this repo's `raw.githubusercontent.com` while s1 is private. Bump = new artifact files + url/sha256 here; `scripts/publish-tap.sh` in the s1 repo automates it.
 - **flutterkill**: `Formula/flutterkill.rb` builds the tagged source tarball. Bump = new url + sha256 here (steps in the flutterkill repo's RELEASING.md).
+- **fell**: `Formula/fell.rb` builds the tagged source tarball the same way (steps in the fell repo's RELEASING.md).
