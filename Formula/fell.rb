@@ -4,8 +4,8 @@
 class Fell < Formula
   desc "Find and safely clean up git worktrees left behind by AI coding agents"
   homepage "https://github.com/Matthew-Eucaristo/fell"
-  url "https://github.com/Matthew-Eucaristo/fell/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "f0f4898beb14de76bfe5fb25a20ec760010bc7000927d5938385959be66d0a20"
+  url "https://github.com/Matthew-Eucaristo/fell/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "227406546778e8d2b89fd3a581d3dec77f3678179916a7f9f7cd62481045cf2a"
   license "MIT"
   head "https://github.com/Matthew-Eucaristo/fell.git", branch: "main"
 
