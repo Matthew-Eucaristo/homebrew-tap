@@ -9,7 +9,7 @@ brew tap matthew-eucaristo/tap
 | Tool | Install | What it is |
 | --- | --- | --- |
 | [s1](https://github.com/Matthew-Eucaristo/s1) | `brew install --cask s1` | Voice-first macOS control agent (fast System 1 + LLM System 2, accessibility-native). Ad-hoc signed → or `--no-quarantine`. |
-| [flutterkill](https://github.com/Matthew-Eucaristo/flutterkill) | `brew install flutterkill` | npkill-style TUI that reclaims disk space from Flutter/Dart build artifacts and caches. Built from source. |
+| [flutterkill](https://github.com/Matthew-Eucaristo/flutterkill) | `brew install flutterkill` | npkill-style TUI that reclaims disk space from Flutter/Dart projects (`build/`, `.dart_tool/`, Pods, Gradle state) and machine-wide caches (pub, Gradle, FVM SDKs, Xcode), Trash first, with a measured receipt. Speaks the family `scan --json` / `apply --plan` contract. Built from source. |
 | [fell](https://github.com/Matthew-Eucaristo/fell) | `brew install fell` | Finds git worktrees left behind by AI coding agents; strips or retires them to the Trash with a rescue bundle, never touching what an app still tracks. Built from source. |
 | [nodekill](https://github.com/Matthew-Eucaristo/nodekill) | `brew install nodekill` | Reclaims disk space from the Node.js footprint: node_modules, framework caches, npm/pnpm/Yarn/Bun stores, npx entries, global packages and old Node versions, through each tool's own command, Trash first. Built from source. |
 | [lately](https://github.com/Matthew-Eucaristo/lately) | `brew install lately` | What just happened on my Mac: a classified timeline of crashes, restarts, new background items and permission prompts from the logs macOS keeps. No root, no daemon. macOS only. Built from source. |

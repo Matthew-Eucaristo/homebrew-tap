@@ -4,8 +4,8 @@
 class Flutterkill < Formula
   desc "Reclaim disk space from Flutter/Dart build artifacts and caches"
   homepage "https://github.com/Matthew-Eucaristo/flutterkill"
-  url "https://github.com/Matthew-Eucaristo/flutterkill/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "5174d1f86ae0793196640b2bc805978a99799906b8e0a02d42fea292238533b0"
+  url "https://github.com/Matthew-Eucaristo/flutterkill/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "86baf708abf623680f46e22651ffd9d9093d4b9d5b967c37697ce45e065df601"
   license "MIT"
   head "https://github.com/Matthew-Eucaristo/flutterkill.git", branch: "main"
 
@@ -17,11 +17,13 @@ class Flutterkill < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/flutterkill --version")
+    assert_match "\"schema_version\": 1", shell_output("#{bin}/flutterkill capabilities --json")
 
-    (testpath/"app/pubspec.yaml").write "name: demo_app\n"
-    (testpath/"app/build").mkpath
-    output = shell_output("#{bin}/flutterkill --json --no-global #{testpath}")
-    assert_match "demo_app", output
-    assert_path_exists testpath/"app/build" # --json never removes anything
+    (testpath/"dev/app/pubspec.yaml").write "name: demo_app\n"
+    (testpath/"dev/app/build/blob").write "x"
+    output = shell_output("#{bin}/flutterkill scan --json --no-global #{testpath}/dev")
+    assert_match "\"name\": \"demo_app\"", output
+    assert_match "\"kind\": \"build\"", output
+    assert_path_exists testpath/"dev/app/build/blob" # scan never changes anything
   end
 end
