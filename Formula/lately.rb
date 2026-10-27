@@ -4,8 +4,8 @@
 class Lately < Formula
   desc "What just happened on my Mac? A classified timeline from logs macOS keeps"
   homepage "https://github.com/Matthew-Eucaristo/lately"
-  url "https://github.com/Matthew-Eucaristo/lately/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "11b682caf6b290d3531c8990dfba7f734b644a09ab30ff5bf4e9e598ac104abc"
+  url "https://github.com/Matthew-Eucaristo/lately/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "396ef6d010f65f31412f64bc9accc0b9713a0ac0034fd3eddad329e4fa9d28de"
   license "MIT"
   head "https://github.com/Matthew-Eucaristo/lately.git", branch: "main"
 
