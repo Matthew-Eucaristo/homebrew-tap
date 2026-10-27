@@ -4,8 +4,8 @@
 class Nodekill < Formula
   desc "Reclaim disk space from node_modules, JS caches and old Node versions"
   homepage "https://github.com/Matthew-Eucaristo/nodekill"
-  url "https://github.com/Matthew-Eucaristo/nodekill/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "ff5908f397fede89c6494289463d17cc36ca02faf3d3f76f66637076184294db"
+  url "https://github.com/Matthew-Eucaristo/nodekill/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "364d4100b4023bf3a1f389cd1f06a283ae0bd8573ac24fcab1150f06d214aa93"
   license "MIT"
   head "https://github.com/Matthew-Eucaristo/nodekill.git", branch: "main"
 
