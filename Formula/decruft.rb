@@ -4,8 +4,8 @@
 class Decruft < Formula
   desc "See and reclaim what a developer's machine accumulates, the official way"
   homepage "https://github.com/Matthew-Eucaristo/decruft"
-  url "https://github.com/Matthew-Eucaristo/decruft/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "2fcf250c08d6fe7c59c97578767434aaa455c3f3ee17bb30bff72cdd361cbe74"
+  url "https://github.com/Matthew-Eucaristo/decruft/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "dcb34b9c74c53f8b55d77e087d01964285813b89aa0fc812592f5a0da12eacbf"
   license "MIT"
   head "https://github.com/Matthew-Eucaristo/decruft.git", branch: "main"
 
