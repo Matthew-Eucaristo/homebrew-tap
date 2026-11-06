@@ -14,7 +14,7 @@ brew tap matthew-eucaristo/tap
 | [nodekill](https://github.com/Matthew-Eucaristo/nodekill) | `brew install nodekill` | Reclaims disk space from the Node.js footprint: node_modules, framework caches, npm/pnpm/Yarn/Bun stores, npx entries, global packages and old Node versions, through each tool's own command, Trash first. Built from source. |
 | [rustkill](https://github.com/Matthew-Eucaristo/rustkill) | `brew install rustkill` | Reclaims disk space from the Rust footprint: `target` folders found by cargo's own tag, Cargo's registry and git caches, sccache, `cargo install` tools, and rustup toolchains, `rust-docs` and cross targets. Folders and caches go to the Trash; toolchains and tools through rustup's and cargo's own commands. Built from source. |
 | [lately](https://github.com/Matthew-Eucaristo/lately) | `brew install lately` | What just happened on my Mac: a classified timeline of crashes, restarts, new background items and permission prompts from the logs macOS keeps. No root, no daemon. macOS only. Built from source. |
-| [decruft](https://github.com/Matthew-Eucaristo/decruft) | `brew install decruft` | A better Storage settings screen for developers, in the terminal: one scan of Go, Xcode and simulators, Homebrew, CocoaPods/uv/pip, Docker and Android, plus everything fell, nodekill and flutterkill find, as a storage bar and treemap. Explains what macOS hides (purgeable, System Data, snapshots) and cleans through each tool's own command, Trash first. Installs fell, nodekill and flutterkill too. Built from source. |
+| [decruft](https://github.com/Matthew-Eucaristo/decruft) | `brew install decruft` | A better Storage settings screen for developers, in the terminal: one scan of Go, Xcode and simulators, Homebrew, CocoaPods/uv/pip, Docker and Android, plus everything fell, nodekill, rustkill and flutterkill find, as a storage bar and treemap. Explains what macOS hides (purgeable, System Data, snapshots) and cleans through each tool's own command, Trash first. Installs fell, nodekill, rustkill and flutterkill too. Built from source. |
 
 ## Uninstall leaves nothing behind
 
@@ -41,4 +41,4 @@ brew untap matthew-eucaristo/tap
 - **nodekill**: `Formula/nodekill.rb`, the same way (steps in the nodekill repo's RELEASING.md).
 - **rustkill**: `Formula/rustkill.rb`, the same way (steps in the rustkill repo's RELEASING.md).
 - **lately**: `Formula/lately.rb`, the same way (steps in the lately repo's RELEASING.md).
-- **decruft**: `Formula/decruft.rb`, the same way (steps in the decruft repo's RELEASING.md). It `depends_on` fell, nodekill and flutterkill from this tap, so release those first when their contract changes.
+- **decruft**: `Formula/decruft.rb`, the same way (steps in the decruft repo's RELEASING.md). It `depends_on` fell, nodekill, rustkill and flutterkill from this tap, so release those first when their contract changes.
