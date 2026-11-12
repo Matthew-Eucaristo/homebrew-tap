@@ -4,8 +4,8 @@
 class Flutterkill < Formula
   desc "Reclaim disk space from Flutter/Dart build artifacts and caches"
   homepage "https://github.com/Matthew-Eucaristo/flutterkill"
-  url "https://github.com/Matthew-Eucaristo/flutterkill/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "86baf708abf623680f46e22651ffd9d9093d4b9d5b967c37697ce45e065df601"
+  url "https://github.com/Matthew-Eucaristo/flutterkill/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "9e543f50f625a69470f8da07b78fea1e6734584c3f85604eb902d47d20591dd9"
   license "MIT"
   head "https://github.com/Matthew-Eucaristo/flutterkill.git", branch: "main"
 
